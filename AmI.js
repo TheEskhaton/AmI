@@ -1,5 +1,5 @@
 ;(function(global){
-	'use strict'
+	'use strict';
 	var 
 
 	regexps = {
@@ -44,7 +44,7 @@
 				if(navigator.userAgent.match(regexps[ua][i])){
 					return true;
 				}
-			};
+			}
 			return false;
 		}
 	},
