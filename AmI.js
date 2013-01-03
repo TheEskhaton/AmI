@@ -1,7 +1,7 @@
 ;(function(global){
 	'use strict';
 	var 
-
+	/* Regular expressions used for browser detection */
 	regexps = {
             'Chrome': [ /Chrome\/(\S+)/ ],
             'Firefox': [ /Firefox\/(\S+)/ ],
