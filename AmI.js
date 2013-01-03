@@ -56,10 +56,20 @@
 			return false;
 		}
 	},
+	mobileCheck = function(){
+		if(typeof navigator !== 'undefined'){
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+ 				return true;
+			}
+		}
+		return false;
+
+	},
 
 	AmI = {
 		browser : browserCheck(),
 		node: nodeCheck(),
+		mobile: mobileCheck(),
 		/* user agent checks */
 		firefox: userAgentCheck('Firefox'),
 		chrome: userAgentCheck('Chrome'),
@@ -68,7 +78,14 @@
 		/* operating system checks */
 		windows: osCheck('WIN'),
 		linux: osCheck('LINUX'),
-		mac: osCheck('MAC')
+		mac: osCheck('MAC'),
+		/* mobile os checks */
+		android: osCheck('ANDROID'),
+		iphone: osCheck('IPHONE'),
+		blackberry: osCheck('BLACKBERRY'),
+		ipad: osCheck('IPAD'),
+		ipod: osCheck('IPOD'),
+		webos: osCheck('WEBOS')
 	};
 
 	global.AmI = AmI;
